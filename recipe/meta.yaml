@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-kylin" %}
-{% set version = "1.0.1" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-apache-kylin-{{ version }}.tar.gz
-  sha256: d0f7ecbf80f718b008c3ec3c0f7785e666a1c172101b21e4a69942a4953d8317
+  sha256: 0295fb0b56f97fea76701a45ad1b3c51107f20c313cd336110e97000ebd5e0ef
 
 build:
   number: 0
