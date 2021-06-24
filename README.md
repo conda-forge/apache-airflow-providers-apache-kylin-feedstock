@@ -40,6 +40,7 @@ Installing `apache-airflow-providers-apache-kylin` from the `conda-forge` channe
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `apache-airflow-providers-apache-kylin` can be installed with:
