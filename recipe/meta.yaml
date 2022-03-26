@@ -10,9 +10,9 @@ source:
   sha256: 46ef3665a5d9a91636a00b44bd37dbb111fad7404cbcbebd6a6f11f68bd1588c
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
@@ -35,9 +35,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Apache Kylin for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-apache-kylin package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-apache-kylin/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
