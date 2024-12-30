@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-apache-kylin" %}
-{% set version = "3.7.0" %}
+{% set version = "3.8.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_kylin-{{ version }}.tar.gz
-  sha256: 09af83e6ee02bb8efbdba0143076821469464a11aaf9f234b2ad2fe3a262921e
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_kylin-{{ version }}.tar.gz
+  sha256: 8e656670b9a200fff1a94536dfdf6f535b14c24a88153c62efc0b8f7b13b0eba
 
 build:
   noarch: python
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.dev0
-    - flit-core >=3.2,<4
+    - python {{ python_min }}
+    - flit-core ==3.10.0
     - pip
   run:
-    - python >=3.8
-    - apache-airflow >=2.8.0
+    - python >={{ python_min }},<4.dev0
+    - apache-airflow >=2.9.0
     - kylinpy >=2.7.0
 
 test:
@@ -30,6 +30,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
