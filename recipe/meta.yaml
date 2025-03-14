@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-apache-kylin" %}
-{% set version = "3.8.0" %}
+{% set version = "3.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_apache_kylin-{{ version }}.tar.gz
-  sha256: 8e656670b9a200fff1a94536dfdf6f535b14c24a88153c62efc0b8f7b13b0eba
+  sha256: d591951bd88a8e8bb9e9e5ed8bd58d93c3af70e1b43e34b920683d60a086afd6
 
 build:
   noarch: python
@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core ==3.10.0
+    - flit-core ==3.11.0
     - pip
   run:
     - python >={{ python_min }},<4.dev0
@@ -37,7 +37,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-apache-kylin for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/apache/kylin/LICENSE
+  license_file: src/airflow/providers/apache/kylin/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-apache-kylin/stable/index.html
   dev_url: https://github.com/apache/airflow/
